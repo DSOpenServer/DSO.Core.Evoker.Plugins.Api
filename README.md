@@ -4,7 +4,7 @@
 
 ![.NET](https://img.shields.io/badge/.NET-6.0%20%7C%208.0-512BD4) ![E2E](https://img.shields.io/badge/u%C3%A7tan%20uca-81%20kontrol-success)
 
-`DSO.Core.Evoker.Plugins.Api`, [DSO.Core.Evoker.Plugins](../DSO.Core.Evoker.Plugins/README.md)'ın `PluginManager`'ını
+`DSO.Core.Evoker.Plugins.Api`, [DSO.Core.Evoker.Plugins](https://github.com/DSOpenServer/DSO.Core.Evoker.Plugins/blob/main/README.md)'ın `PluginManager`'ını
 eksiksiz bir REST arka ucu olarak sunar. Uygulama klasörünüzdeki `Plugins` dizinine DLL bırakırsınız; gerisini API
 halleder:
 
@@ -55,8 +55,8 @@ Bir yönetim paneli, bir otomasyon betiği ya da başka bir mikroservis bu uçla
 <ProjectReference Include="..\DSO.Core.Evoker.Plugins.Api\DSO.Core.Evoker.Plugins.Api.csproj" />
 ```
 
-Bu paket [DSO.Core.Evoker.Api](../DSO.Core.Evoker.Api/README.md) ve
-[DSO.Core.Evoker.Plugins](../DSO.Core.Evoker.Plugins/README.md)'a referans verir. Hedefler: `net6.0`, `net8.0`.
+Bu paket [DSO.Core.Evoker.Api](https://github.com/DSOpenServer/DSO.Core.Evoker.Api/blob/main/README.md) ve
+[DSO.Core.Evoker.Plugins](https://github.com/DSOpenServer/DSO.Core.Evoker.Plugins/blob/main/README.md)'a referans verir. Hedefler: `net6.0`, `net8.0`.
 
 ---
 
@@ -158,10 +158,10 @@ düzgünce kapatılır.
 | `POST /api/plugins/{key}/reload` | Yeniden yükle (DLL değiştiyse). Pasifse **409** |
 | `POST /api/plugins/{key}/stop` | Bellekten at ama aktif bırak; ilk çağrıda kendiliğinden yüklenir |
 | `PUT /api/plugins/{key}/mode` | `{ "mode": "InProcess" }`: **canlı** mod geçişi |
-| `POST /api/plugins/{key}/execute` | JSON komut ([biçim](../DSO.Core.Evoker/README.md#commands--json-komutlar)). Pasifse **409 Inactive** |
+| `POST /api/plugins/{key}/execute` | JSON komut ([biçim](https://github.com/DSOpenServer/DSO.Core.Evoker/blob/main/README.md#commands--json-komutlar)). Pasifse **409 Inactive** |
 
 Plugin'ler aynı Guid ile genel katalogda da (`Kind = "Plugin"`) bulunur. Bu yüzden
-[`api/evoker/targets/{key}/execute`](../DSO.Core.Evoker.Api/README.md#uçlar) da çalışır.
+[`api/evoker/targets/{key}/execute`](https://github.com/DSOpenServer/DSO.Core.Evoker.Api/blob/main/README.md#uçlar) da çalışır.
 
 ---
 
@@ -256,7 +256,7 @@ Content-Type: application/json
 
 ## Cevap modelleri
 
-Tüm cevaplar [Evoker zarfını](../DSO.Core.Evoker.Api/README.md#cevap-zarfı-ve-http-kodları) kullanır:
+Tüm cevaplar [Evoker zarfını](https://github.com/DSOpenServer/DSO.Core.Evoker.Api/blob/main/README.md#cevap-zarfı-ve-http-kodları) kullanır:
 `{ success, result, message, error, elapsedMs }`.
 
 ### PluginView (liste ve işlem cevapları)
@@ -427,7 +427,7 @@ dotnet run --project DSO.Core.Evoker.Plugins.DemoApi.E2ETest      # beklenen: 81
 ```
 
 Daha alt seviyedeki testler (parite, unload, manager, performans) için:
-[DSO.Core.Evoker.Plugins → Testler](../DSO.Core.Evoker.Plugins/README.md#testler-ve-örnekler).
+[DSO.Core.Evoker.Plugins → Testler](https://github.com/DSOpenServer/DSO.Core.Evoker.Plugins/blob/main/README.md#testler-ve-örnekler).
 
 ---
 
